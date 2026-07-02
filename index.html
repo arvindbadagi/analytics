@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aravind Badagi | Senior Data Analyst</title>
     <meta name="description" content="Portfolio of Aravind Badagi, a Data Analyst specializing in Power BI, SQL, and Data Visualization.">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Google Fonts: Playfair Display (Serif) & Mulish (Sans) -->
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest">
+    </script>
+
+    <!-- Google Fonts: Inter (Sans) & Playfair Display (Serif) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- Custom Config for Tailwind -->
     <script>
@@ -23,156 +25,371 @@
                 extend: {
                     colors: {
                         brand: {
-                            blue: '#2c3e50',
-                            accent: '#3498db',
-                            gold: '#CA8A04',
+                            navy: '#0f172a',
+                            slate: '#1e293b',
+                            gold: '#f59e0b',
+                            golddark: '#d97706',
+                            goldlight: '#fbbf24',
+                            accent: '#0ea5e9',
+                            accentdark: '#0284c7',
                         },
                         neutral: {
-                            50: '#f9fafb',
-                            100: '#f3f4f6',
-                            800: '#1f2937',
-                            900: '#111827',
-                            950: '#030712',
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
                         }
                     },
                     fontFamily: {
-                        sans: ['Mulish', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
                     },
-                    // Adjusted font sizes
                     fontSize: {
-                        'xs': '0.8rem',     
-                        'sm': '0.95rem',    
-                        'base': '1.05rem',  
-                        'lg': '1.15rem',
-                        'xl': '1.35rem',
-                        '2xl': '1.75rem',
-                        '3xl': '2rem',
-                        '4xl': '2.75rem',
-                        '5xl': '3.5rem',
-                    }
+                        'xs': '0.75rem',
+                        'sm': '0.875rem',
+                        'base': '1rem',
+                        'lg': '1.125rem',
+                        'xl': '1.25rem',
+                        '2xl': '1.5rem',
+                        '3xl': '1.875rem',
+                        '4xl': '2.5rem',
+                        '5xl': '3.25rem',
+                        '6xl': '4rem',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 3s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'slide-down': 'slideDown 0.6s ease-out forwards',
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'scale-in': 'scaleIn 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: 0.6 },
+                        },
+                        slideUp: {
+                            '0%': { opacity: 0, transform: 'translateY(30px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        },
+                        slideDown: {
+                            '0%': { opacity: 0, transform: 'translateY(-30px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: 0 },
+                            '100%': { opacity: 1 },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: 0, transform: 'scale(0.9)' },
+                            '100%': { opacity: 1, transform: 'scale(1)' },
+                        },
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                    },
                 }
             }
         }
     </script>
 
     <style>
-        body { 
-            font-family: 'Mulish', sans-serif; 
-            transition: background-color 0.3s, color 0.3s;
-            line-height: 1.6;
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.4s, color 0.4s;
+            line-height: 1.7;
         }
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Playfair Display', serif;
             line-height: 1.2;
         }
+
         ::selection {
-            background: #e0f2fe;
-            color: #0c4a6e;
+            background: #f59e0b;
+            color: #0f172a;
         }
+
         .dark ::selection {
-            background: #CA8A04;
-            color: black;
+            background: #f59e0b;
+            color: #0f172a;
         }
-        .dark body {
-            background-color: #030712;
-            color: #d1d5db;
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
         }
-        .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-            color: #f3f4f6;
-        }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 8px;
         }
         ::-webkit-scrollbar-track {
             background: transparent;
         }
         ::-webkit-scrollbar-thumb {
-            background-color: #cbd5e1;
+            background: #f59e0b;
             border-radius: 20px;
             border: 2px solid transparent;
             background-clip: content-box;
         }
         .dark ::-webkit-scrollbar-thumb {
-            background-color: #374151;
+            background: #f59e0b;
+        }
+
+        /* Glassmorphism base */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Subtle shimmer */
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.1), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        /* Card hover 3D effect */
+        .card-3d {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+        }
+
+        .card-3d:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .dark .card-3d:hover {
+            box-shadow: 0 25px 50px -12px rgba(245, 158, 11, 0.15);
+        }
+
+        /* Nav link underline */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f59e0b;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero image glow */
+        .hero-glow {
+            position: relative;
+        }
+
+        .hero-glow::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.15), transparent 70%);
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        /* Timeline dot pulse */
+        .timeline-dot {
+            position: relative;
+        }
+
+        .timeline-dot::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 2px solid rgba(245, 158, 11, 0.3);
+            animation: dotPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes dotPulse {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Section transition */
+        .section-transition {
+            transition: background-color 0.6s ease;
+        }
+
+        /* Skill bar glow */
+        .skill-bar {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.2), transparent);
+            animation: shimmer 2s ease-in-out infinite;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .hero-glow::before {
+                inset: -10px;
+            }
         }
     </style>
 </head>
-<body class="antialiased bg-white text-gray-700 dark:bg-neutral-950 dark:text-gray-300">
+<body class="antialiased bg-white text-neutral-700 dark:bg-neutral-950 dark:text-neutral-300">
 
     <!-- Top Navigation Bar -->
-    <nav class="fixed top-0 w-full z-50 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-md border-b border-gray-100 dark:border-neutral-800 transition-colors duration-300">
+    <nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl border-b border-neutral-200/50 dark:border-neutral-800/50 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            
+
             <!-- Logo / Name -->
             <div class="flex-shrink-0 flex items-center gap-3">
-                <div class="w-9 h-9 bg-brand-accent dark:bg-brand-gold rounded-full flex items-center justify-center text-white font-serif font-bold text-sm shadow-md">AB</div>
-                <span class="font-serif font-bold text-lg text-gray-900 dark:text-white tracking-wide">Aravind Badagi</span>
+                <div class="w-10 h-10 bg-gradient-to-br from-brand-gold to-brand-golddark rounded-xl flex items-center justify-center text-neutral-900 font-serif font-bold text-sm shadow-lg shadow-brand-gold/25">
+                    AB
+                </div>
+                <span class="font-serif font-bold text-xl text-neutral-900 dark:text-white tracking-tight">Aravind Badagi</span>
             </div>
 
             <!-- Centered Menu (Desktop) -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-accent dark:text-gray-400 dark:hover:text-brand-gold transition-colors">Home</a>
-                <a href="#about" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-accent dark:text-gray-400 dark:hover:text-brand-gold transition-colors">About</a>
-                <a href="#experience" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-accent dark:text-gray-400 dark:hover:text-brand-gold transition-colors">Experience</a>
-                <a href="#certifications" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-accent dark:text-gray-400 dark:hover:text-brand-gold transition-colors">Certifications</a>
-                <a href="#portfolio" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-accent dark:text-gray-400 dark:hover:text-brand-gold transition-colors">Portfolio</a>
-                <a href="#projects" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-accent dark:text-gray-400 dark:hover:text-brand-gold transition-colors">Projects</a>
-                <a href="#contact" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-accent dark:text-gray-400 dark:hover:text-brand-gold transition-colors">Contact</a>
+            <div class="hidden md:flex space-x-10">
+                <a href="#home" class="nav-link text-xs font-semibold uppercase tracking-widest text-neutral-500 hover:text-brand-gold dark:text-neutral-400 dark:hover:text-brand-gold transition-colors">Home</a>
+                <a href="#about" class="nav-link text-xs font-semibold uppercase tracking-widest text-neutral-500 hover:text-brand-gold dark:text-neutral-400 dark:hover:text-brand-gold transition-colors">About</a>
+                <a href="#experience" class="nav-link text-xs font-semibold uppercase tracking-widest text-neutral-500 hover:text-brand-gold dark:text-neutral-400 dark:hover:text-brand-gold transition-colors">Experience</a>
+                <a href="#certifications" class="nav-link text-xs font-semibold uppercase tracking-widest text-neutral-500 hover:text-brand-gold dark:text-neutral-400 dark:hover:text-brand-gold transition-colors">Certifications</a>
+                <a href="#portfolio" class="nav-link text-xs font-semibold uppercase tracking-widest text-neutral-500 hover:text-brand-gold dark:text-neutral-400 dark:hover:text-brand-gold transition-colors">Portfolio</a>
+                <a href="#projects" class="nav-link text-xs font-semibold uppercase tracking-widest text-neutral-500 hover:text-brand-gold dark:text-neutral-400 dark:hover:text-brand-gold transition-colors">Projects</a>
+                <a href="#contact" class="nav-link text-xs font-semibold uppercase tracking-widest text-neutral-500 hover:text-brand-gold dark:text-neutral-400 dark:hover:text-brand-gold transition-colors">Contact</a>
             </div>
 
             <!-- Right Actions -->
-            <div class="flex items-center gap-4">
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 text-gray-500 dark:text-gray-400 transition-colors">
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle" class="p-2.5 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-500 dark:text-neutral-400 transition-colors">
                     <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
                     <i data-lucide="sun" class="w-5 h-5 block dark:hidden"></i>
                 </button>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 dark:text-gray-400">
+                <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-600 dark:text-neutral-400 transition-colors">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-neutral-950 border-t border-gray-100 dark:border-neutral-800 absolute w-full left-0 shadow-xl">
-            <div class="px-6 py-6 space-y-6 flex flex-col items-center">
-                <a href="#home" class="mobile-link text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300">Home</a>
-                <a href="#about" class="mobile-link text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300">About</a>
-                <a href="#experience" class="mobile-link text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300">Experience</a>
-                <a href="#certifications" class="mobile-link text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300">Certifications</a>
-                <a href="#portfolio" class="mobile-link text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300">Portfolio</a>
-                <a href="#projects" class="mobile-link text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300">Projects</a>
-                <a href="#contact" class="mobile-link text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300">Contact</a>
+        <div id="mobile-menu" class="md:hidden hidden bg-white/95 dark:bg-neutral-950/95 backdrop-blur-xl border-t border-neutral-200/50 dark:border-neutral-800/50 absolute w-full left-0 shadow-2xl">
+            <div class="px-6 py-8 space-y-6 flex flex-col items-center">
+                <a href="#home" class="mobile-link text-sm font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-300 hover:text-brand-gold transition-colors">Home</a>
+                <a href="#about" class="mobile-link text-sm font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-300 hover:text-brand-gold transition-colors">About</a>
+                <a href="#experience" class="mobile-link text-sm font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-300 hover:text-brand-gold transition-colors">Experience</a>
+                <a href="#certifications" class="mobile-link text-sm font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-300 hover:text-brand-gold transition-colors">Certifications</a>
+                <a href="#portfolio" class="mobile-link text-sm font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-300 hover:text-brand-gold transition-colors">Portfolio</a>
+                <a href="#projects" class="mobile-link text-sm font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-300 hover:text-brand-gold transition-colors">Projects</a>
+                <a href="#contact" class="mobile-link text-sm font-semibold uppercase tracking-widest text-neutral-600 dark:text-neutral-300 hover:text-brand-gold transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
     <main class="pt-20">
-        
+
         <!-- Home / Hero Section -->
-        <section id="home" class="min-h-[85vh] flex items-center justify-center px-6 md:px-16 py-20 relative overflow-hidden">
-            <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <section id="home" class="min-h-[90vh] flex items-center justify-center px-6 md:px-16 py-20 relative overflow-hidden bg-gradient-to-br from-neutral-50 via-white to-neutral-100 dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950">
+            <!-- Decorative background elements -->
+            <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-brand-gold/5 to-transparent rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-radial from-brand-accent/5 to-transparent rounded-full blur-3xl"></div>
+
+            <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
                 <!-- Text Column -->
                 <div class="order-2 lg:order-1 text-center lg:text-left">
-                    <span class="text-sm font-bold tracking-[0.2em] text-gray-400 dark:text-gray-500 uppercase mb-6 block">Senior Data Analyst</span>
-                    <h1 class="text-5xl md:text-7xl font-serif font-bold text-gray-900 dark:text-white leading-[1.1] mb-8">
+                    <div class="inline-block mb-6 px-4 py-1.5 rounded-full bg-brand-gold/10 dark:bg-brand-gold/20 border border-brand-gold/20 dark:border-brand-gold/30">
+                        <span class="text-xs font-bold tracking-[0.2em] text-brand-gold dark:text-brand-goldlight uppercase">Senior Data Analyst</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-serif font-bold text-neutral-900 dark:text-white leading-[1.1] mb-8">
                         Turning Data into <br/>
-                        <span class="text-brand-accent dark:text-brand-gold italic">Strategic Clarity.</span>
+                        <span class="gradient-text italic">Strategic Clarity.</span>
                     </h1>
-                    <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0 font-light">
+                    <p class="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0 font-light">
                         With over 10 years of expertise, I specialize in transforming raw government and business data into actionable dashboards using Power BI and SQL. Based in Bengaluru, India.
                     </p>
-                    
+
                     <div class="flex flex-wrap gap-5 justify-center lg:justify-start items-center">
-                        <a href="https://linkedin.com/in/arvindbadagi" target="_blank" class="flex items-center justify-center w-12 h-12 rounded-full border border-gray-300 dark:border-neutral-700 text-gray-600 dark:text-gray-400 hover:bg-brand-accent hover:border-brand-accent hover:text-white dark:hover:bg-brand-gold dark:hover:border-brand-gold dark:hover:text-black transition-all">
+                        <a href="https://linkedin.com/in/arvindbadagi" target="_blank" class="flex items-center justify-center w-12 h-12 rounded-full border-2 border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:bg-brand-gold hover:border-brand-gold hover:text-neutral-900 dark:hover:bg-brand-gold dark:hover:border-brand-gold dark:hover:text-neutral-900 transition-all duration-300">
                             <i data-lucide="linkedin" class="w-5 h-5"></i>
                         </a>
-                        <a href="https://github.com/arvindbadagi/" target="_blank" class="flex items-center justify-center w-12 h-12 rounded-full border border-gray-300 dark:border-neutral-700 text-gray-600 dark:text-gray-400 hover:bg-gray-900 hover:border-gray-900 hover:text-white dark:hover:bg-white dark:hover:border-white dark:hover:text-black transition-all">
+                        <a href="https://github.com/arvindbadagi/" target="_blank" class="flex items-center justify-center w-12 h-12 rounded-full border-2 border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-900 hover:border-neutral-900 hover:text-white dark:hover:bg-white dark:hover:border-white dark:hover:text-neutral-900 transition-all duration-300">
                             <i data-lucide="github" class="w-5 h-5"></i>
                         </a>
-                        <a href="https://drive.google.com/file/d/1xcqUPQ48X30ekugFLKxzhU5groCDVlCm/view?usp=sharing" target="_blank" class="flex items-center justify-center w-12 h-12 rounded-full border border-gray-300 dark:border-neutral-700 text-gray-600 dark:text-gray-400 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all">
+                        <a href="https://drive.google.com/file/d/1xcqUPQ48X30ekugFLKxzhU5groCDVlCm/view?usp=sharing" target="_blank" class="flex items-center justify-center w-12 h-12 rounded-full border-2 border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:bg-emerald-600 hover:border-emerald-600 hover:text-white transition-all duration-300">
                             <i data-lucide="file-text" class="w-5 h-5"></i>
                         </a>
                     </div>
@@ -180,40 +397,41 @@
 
                 <!-- Image Column -->
                 <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
-                    <div class="relative w-80 h-80 lg:w-[32rem] lg:h-[32rem] group">
-                        <div class="absolute inset-0 bg-gray-100 dark:bg-neutral-800 rounded-full scale-95 group-hover:scale-100 transition-transform duration-500 -z-10"></div>
-                        <div class="absolute inset-0 border border-gray-200 dark:border-neutral-700 rounded-full scale-105 group-hover:scale-110 transition-transform duration-700 -z-20"></div>
-                    <img src="aboutmee.png" alt="Aravind Badagi"
-     class="w-full h-full object-cover rounded-full shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border-4 border-white dark:border-neutral-900">
-
+                    <div class="relative w-72 h-72 lg:w-[30rem] lg:h-[30rem] hero-glow">
+                        <div class="absolute inset-0 bg-gradient-to-br from-brand-gold/10 to-brand-accent/10 rounded-full scale-95 animate-float"></div>
+                        <img src="aboutmee.png" alt="Aravind Badagi"
+                        class="w-full h-full object-cover rounded-full shadow-2xl border-4 border-white dark:border-neutral-800 relative z-10">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- About & Skills Section -->
-        <section id="about" class="py-32 px-6 md:px-16 bg-gray-50 dark:bg-neutral-900 relative">
-            <div class="max-w-7xl mx-auto">
+        <section id="about" class="py-32 px-6 md:px-16 bg-white dark:bg-neutral-950 relative section-transition">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-gold/5 via-transparent to-transparent pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
                     <div>
-                        <span class="text-sm font-bold tracking-[0.2em] text-gray-400 dark:text-gray-500 uppercase mb-6 block">Biography</span>
-                        <h2 class="text-4xl font-serif font-bold mb-8 text-gray-900 dark:text-white">A decade of data excellence.</h2>
-                        <p class="text-lg leading-loose text-gray-600 dark:text-gray-400 mb-8 font-light">
-                            I bridge the gap between technical data engineering and strategic business decision-making. My work has directly contributed to significant efficiency gains in government projects like <strong>Bhoomi</strong> and private sector initiatives.
+                        <div class="inline-block mb-6 px-4 py-1.5 rounded-full bg-brand-gold/10 dark:bg-brand-gold/20 border border-brand-gold/20 dark:border-brand-gold/30">
+                            <span class="text-xs font-bold tracking-[0.2em] text-brand-gold dark:text-brand-goldlight uppercase">Biography</span>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8 text-neutral-900 dark:text-white">A decade of <span class="gradient-text">data excellence.</span></h2>
+                        <p class="text-lg leading-loose text-neutral-600 dark:text-neutral-400 mb-8 font-light">
+                            I bridge the gap between technical data engineering and strategic business decision-making. My work has directly contributed to significant efficiency gains in government projects like <strong class="text-brand-gold">Bhoomi</strong> and private sector initiatives.
                         </p>
-                        
-                        <div class="grid grid-cols-3 gap-10 mt-12 border-t border-gray-200 dark:border-neutral-800 pt-10">
+
+                        <div class="grid grid-cols-3 gap-10 mt-12 border-t border-neutral-200 dark:border-neutral-800 pt-10">
                             <div>
-                                <h3 class="text-5xl font-serif font-bold text-brand-accent dark:text-brand-gold mb-2">10+</h3>
-                                <p class="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-500">Years Exp.</p>
+                                <h3 class="text-5xl font-serif font-bold gradient-text mb-2">10+</h3>
+                                <p class="text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-500">Years Exp.</p>
                             </div>
                             <div>
-                                <h3 class="text-5xl font-serif font-bold text-brand-accent dark:text-brand-gold mb-2">20+</h3>
-                                <p class="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-500">Dashboards</p>
+                                <h3 class="text-5xl font-serif font-bold gradient-text mb-2">20+</h3>
+                                <p class="text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-500">Dashboards</p>
                             </div>
                             <div>
-                                <h3 class="text-5xl font-serif font-bold text-brand-accent dark:text-brand-gold mb-2">100%</h3>
-                                <p class="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-500">Availability</p>
+                                <h3 class="text-5xl font-serif font-bold gradient-text mb-2">100%</h3>
+                                <p class="text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-500">Availability</p>
                             </div>
                         </div>
                     </div>
@@ -222,47 +440,47 @@
                     <div class="space-y-10 pt-6">
                         <div>
                             <div class="flex justify-between mb-3">
-                                <span class="text-xs font-bold uppercase tracking-widest text-gray-700 dark:text-gray-300">Power BI & DAX</span>
-                                <span class="text-xs font-bold text-brand-accent dark:text-brand-gold">95%</span>
+                                <span class="text-xs font-bold uppercase tracking-widest text-neutral-700 dark:text-neutral-300">Power BI &amp; DAX</span>
+                                <span class="text-xs font-bold text-brand-gold">95%</span>
                             </div>
-                            <div class="w-full bg-gray-200 dark:bg-neutral-800 h-2 rounded-full overflow-hidden">
-                                <div class="bg-brand-accent dark:bg-brand-gold h-2 rounded-full" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-3">
-                                <span class="text-xs font-bold uppercase tracking-widest text-gray-700 dark:text-gray-300">SQL (T-SQL, Azure SQL)</span>
-                                <span class="text-xs font-bold text-brand-accent dark:text-brand-gold">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-neutral-800 h-2 rounded-full overflow-hidden">
-                                <div class="bg-brand-accent dark:bg-brand-gold h-2 rounded-full" style="width: 90%"></div>
+                            <div class="w-full bg-neutral-200 dark:bg-neutral-800 h-2.5 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-brand-gold to-brand-goldlight h-2.5 rounded-full skill-bar" style="width: 95%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-3">
-                                <span class="text-xs font-bold uppercase tracking-widest text-gray-700 dark:text-gray-300">Python (Pandas, Selenium, Matplotlib)</span>
-                                <span class="text-xs font-bold text-brand-accent dark:text-brand-gold">85%</span>
+                                <span class="text-xs font-bold uppercase tracking-widest text-neutral-700 dark:text-neutral-300">SQL (T-SQL, Azure SQL)</span>
+                                <span class="text-xs font-bold text-brand-gold">90%</span>
                             </div>
-                            <div class="w-full bg-gray-200 dark:bg-neutral-800 h-2 rounded-full overflow-hidden">
-                                <div class="bg-brand-accent dark:bg-brand-gold h-2 rounded-full" style="width: 85%"></div>
+                            <div class="w-full bg-neutral-200 dark:bg-neutral-800 h-2.5 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-brand-gold to-brand-goldlight h-2.5 rounded-full skill-bar" style="width: 90%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-3">
-                                <span class="text-xs font-bold uppercase tracking-widest text-gray-700 dark:text-gray-300">Azure Data Factory & Microsoft Fabric</span>
-                                <span class="text-xs font-bold text-brand-accent dark:text-brand-gold">75%</span>
+                                <span class="text-xs font-bold uppercase tracking-widest text-neutral-700 dark:text-neutral-300">Python (Pandas, Selenium, Matplotlib)</span>
+                                <span class="text-xs font-bold text-brand-gold">85%</span>
                             </div>
-                            <div class="w-full bg-gray-200 dark:bg-neutral-800 h-2 rounded-full overflow-hidden">
-                                <div class="bg-brand-accent dark:bg-brand-gold h-2 rounded-full" style="width: 75%"></div>
+                            <div class="w-full bg-neutral-200 dark:bg-neutral-800 h-2.5 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-brand-gold to-brand-goldlight h-2.5 rounded-full skill-bar" style="width: 85%"></div>
                             </div>
                         </div>
-                         <div>
+                        <div>
                             <div class="flex justify-between mb-3">
-                                <span class="text-xs font-bold uppercase tracking-widest text-gray-700 dark:text-gray-300">Power Automate & Web Scraping</span>
-                                <span class="text-xs font-bold text-brand-accent dark:text-brand-gold">80%</span>
+                                <span class="text-xs font-bold uppercase tracking-widest text-neutral-700 dark:text-neutral-300">Azure Data Factory &amp; Microsoft Fabric</span>
+                                <span class="text-xs font-bold text-brand-gold">75%</span>
                             </div>
-                            <div class="w-full bg-gray-200 dark:bg-neutral-800 h-2 rounded-full overflow-hidden">
-                                <div class="bg-brand-accent dark:bg-brand-gold h-2 rounded-full" style="width: 80%"></div>
+                            <div class="w-full bg-neutral-200 dark:bg-neutral-800 h-2.5 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-brand-gold to-brand-goldlight h-2.5 rounded-full skill-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-3">
+                                <span class="text-xs font-bold uppercase tracking-widest text-neutral-700 dark:text-neutral-300">Power Automate &amp; Web Scraping</span>
+                                <span class="text-xs font-bold text-brand-gold">80%</span>
+                            </div>
+                            <div class="w-full bg-neutral-200 dark:bg-neutral-800 h-2.5 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-brand-gold to-brand-goldlight h-2.5 rounded-full skill-bar" style="width: 80%"></div>
                             </div>
                         </div>
                     </div>
@@ -271,23 +489,29 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="py-32 px-6 md:px-16 border-t border-gray-100 dark:border-neutral-800">
-            <div class="max-w-6xl mx-auto">
-                <span class="text-sm font-bold tracking-[0.2em] text-gray-400 dark:text-gray-500 uppercase mb-16 block text-center">Resume</span>
-                
-                <div class="space-y-16 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-px before:bg-gray-200 dark:before:bg-neutral-800 before:hidden md:before:block">
+        <section id="experience" class="py-32 px-6 md:px-16 bg-neutral-50 dark:bg-neutral-900 relative section-transition">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-gold/5 via-transparent to-transparent pointer-events-none"></div>
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <div class="inline-block mb-4 px-4 py-1.5 rounded-full bg-brand-gold/10 dark:bg-brand-gold/20 border border-brand-gold/20 dark:border-brand-gold/30">
+                        <span class="text-xs font-bold tracking-[0.2em] text-brand-gold dark:text-brand-goldlight uppercase">Resume</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 dark:text-white">Professional <span class="gradient-text">Journey</span></h2>
+                </div>
+
+                <div class="space-y-16 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-brand-gold before:via-brand-gold/30 before:to-transparent before:hidden md:before:block">
                     <!-- Job 1 -->
                     <div class="md:flex justify-between items-center group">
                         <div class="md:w-[45%] text-right pr-16">
-                            <h4 class="text-xl font-serif font-bold text-gray-900 dark:text-white">Invensis Pvt. Ltd</h4>
-                            <p class="text-xs font-bold uppercase tracking-widest text-brand-accent dark:text-brand-gold mt-2">2022 - Present</p>
-                            <p class="text-sm text-gray-500 mt-2">Client: DC Office Bidar</p>
+                            <h4 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Invensis Pvt. Ltd</h4>
+                            <p class="text-xs font-bold uppercase tracking-widest text-brand-gold mt-2">2022 - Present</p>
+                            <p class="text-sm text-neutral-500 mt-2">Client: DC Office Bidar</p>
                         </div>
-                        <div class="hidden md:block w-4 h-4 bg-white dark:bg-neutral-950 border-2 border-brand-accent dark:border-brand-gold rounded-full z-10 shadow-md"></div>
+                        <div class="hidden md:block w-5 h-5 bg-white dark:bg-neutral-900 border-2 border-brand-gold rounded-full z-10 shadow-lg shadow-brand-gold/20 timeline-dot"></div>
                         <div class="md:w-[45%] pl-16 mt-6 md:mt-0">
-                            <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-3">Bhoomi Consultant</h3>
-                            <p class="text-base text-gray-600 dark:text-gray-400 leading-relaxed font-light">
-                                Designed the <a href="https://bhoomibidar.github.io/bhoomi/" class="underline decoration-brand-accent dark:decoration-brand-gold hover:text-brand-accent dark:hover:text-brand-gold transition-colors">Bhoomi Bidar Portal</a> and automated technical complaint resolutions. Trained operators improving accuracy by 20%.
+                            <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-200 mb-3">Bhoomi Consultant</h3>
+                            <p class="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
+                                Designed the <a href="https://bhoomibidar.github.io/bhoomi/" target="_blank" class="text-brand-gold hover:text-brand-goldlight underline decoration-1 underline-offset-2 transition-colors">Bhoomi Bidar Portal</a> and automated technical complaint resolutions. Trained operators improving accuracy by 20%.
                             </p>
                         </div>
                     </div>
@@ -295,14 +519,14 @@
                     <!-- Job 2 -->
                     <div class="md:flex justify-between items-center group flex-row-reverse">
                         <div class="md:w-[45%] text-left pl-16">
-                            <h4 class="text-xl font-serif font-bold text-gray-900 dark:text-white">Epic Minds Pvt. Ltd</h4>
-                            <p class="text-xs font-bold uppercase tracking-widest text-brand-accent dark:text-brand-gold mt-2">2016 - 2022</p>
-                            <p class="text-sm text-gray-500 mt-2">Bangalore</p>
+                            <h4 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Epic Minds Pvt. Ltd</h4>
+                            <p class="text-xs font-bold uppercase tracking-widest text-brand-gold mt-2">2016 - 2022</p>
+                            <p class="text-sm text-neutral-500 mt-2">Bangalore</p>
                         </div>
-                        <div class="hidden md:block w-4 h-4 bg-white dark:bg-neutral-950 border-2 border-gray-300 dark:border-neutral-700 rounded-full z-10 group-hover:border-brand-accent dark:group-hover:border-brand-gold transition-colors shadow-md"></div>
+                        <div class="hidden md:block w-5 h-5 bg-white dark:bg-neutral-900 border-2 border-neutral-300 dark:border-neutral-700 rounded-full z-10 group-hover:border-brand-gold dark:group-hover:border-brand-gold transition-colors shadow-lg"></div>
                         <div class="md:w-[45%] text-right pr-16 mt-6 md:mt-0">
-                            <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-3">District Project Manager</h3>
-                            <p class="text-base text-gray-600 dark:text-gray-400 leading-relaxed font-light">
+                            <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-200 mb-3">District Project Manager</h3>
+                            <p class="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
                                 Developed Power BI dashboards leading to a 15% increase in efficiency. Identified 25% revenue growth opportunities through trend monitoring.
                             </p>
                         </div>
@@ -311,14 +535,14 @@
                     <!-- Job 3 -->
                     <div class="md:flex justify-between items-center group">
                         <div class="md:w-[45%] text-right pr-16">
-                            <h4 class="text-xl font-serif font-bold text-gray-900 dark:text-white">CMS Computers</h4>
-                            <p class="text-xs font-bold uppercase tracking-widest text-brand-accent dark:text-brand-gold mt-2">2016 - 2022</p>
-                            <p class="text-sm text-gray-500 mt-2">Bangalore</p>
+                            <h4 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">CMS Computers</h4>
+                            <p class="text-xs font-bold uppercase tracking-widest text-brand-gold mt-2">2016 - 2022</p>
+                            <p class="text-sm text-neutral-500 mt-2">Bangalore</p>
                         </div>
-                        <div class="hidden md:block w-4 h-4 bg-white dark:bg-neutral-950 border-2 border-gray-300 dark:border-neutral-700 rounded-full z-10 group-hover:border-brand-accent dark:group-hover:border-brand-gold transition-colors shadow-md"></div>
+                        <div class="hidden md:block w-5 h-5 bg-white dark:bg-neutral-900 border-2 border-neutral-300 dark:border-neutral-700 rounded-full z-10 group-hover:border-brand-gold dark:group-hover:border-brand-gold transition-colors shadow-lg"></div>
                         <div class="md:w-[45%] pl-16 mt-6 md:mt-0">
-                            <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-3">District Project Manager</h3>
-                            <p class="text-base text-gray-600 dark:text-gray-400 leading-relaxed font-light">
+                            <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-200 mb-3">District Project Manager</h3>
+                            <p class="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
                                 Achieved 100% report availability via automated Data Gateway refresh cycles. Reduced data processing time by 5% through modeling.
                             </p>
                         </div>
@@ -327,14 +551,14 @@
                     <!-- Job 4 -->
                     <div class="md:flex justify-between items-center group flex-row-reverse">
                         <div class="md:w-[45%] text-left pl-16">
-                            <h4 class="text-xl font-serif font-bold text-gray-900 dark:text-white">Astrix Technologies</h4>
-                            <p class="text-xs font-bold uppercase tracking-widest text-brand-accent dark:text-brand-gold mt-2">2012 - 2015</p>
-                            <p class="text-sm text-gray-500 mt-2">Bangalore</p>
+                            <h4 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Astrix Technologies</h4>
+                            <p class="text-xs font-bold uppercase tracking-widest text-brand-gold mt-2">2012 - 2015</p>
+                            <p class="text-sm text-neutral-500 mt-2">Bangalore</p>
                         </div>
-                        <div class="hidden md:block w-4 h-4 bg-white dark:bg-neutral-950 border-2 border-gray-300 dark:border-neutral-700 rounded-full z-10 group-hover:border-brand-accent dark:group-hover:border-brand-gold transition-colors shadow-md"></div>
+                        <div class="hidden md:block w-5 h-5 bg-white dark:bg-neutral-900 border-2 border-neutral-300 dark:border-neutral-700 rounded-full z-10 group-hover:border-brand-gold dark:group-hover:border-brand-gold transition-colors shadow-lg"></div>
                         <div class="md:w-[45%] text-right pr-16 mt-6 md:mt-0">
-                            <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-3">Sr. Computer Programmer</h3>
-                            <p class="text-base text-gray-600 dark:text-gray-400 leading-relaxed font-light">
+                            <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-200 mb-3">Sr. Computer Programmer</h3>
+                            <p class="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
                                 Cleansed 10M+ records reducing errors by 85%. Optimized shipping expenses cutting costs by 12% through data analysis.
                             </p>
                         </div>
@@ -344,240 +568,323 @@
         </section>
 
         <!-- Education & Certifications -->
-        <section id="certifications" class="py-20 px-8 md:px-16 bg-white dark:bg-neutral-950 border-t border-gray-100 dark:border-neutral-800">
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <span class="text-xs font-bold tracking-[0.2em] text-gray-400 dark:text-gray-500 uppercase mb-6 block">Education</span>
-                    <div class="space-y-6">
-                        <div>
-                            <h4 class="text-lg font-serif font-bold text-gray-900 dark:text-white">Masters in Computer Application</h4>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Bangalore University, 2011</p>
-                            <p class="text-xs font-bold text-brand-accent dark:text-brand-gold mt-1">70% (Distinction)</p>
+        <section id="certifications" class="py-28 px-6 md:px-16 bg-white dark:bg-neutral-950 border-t border-neutral-200/50 dark:border-neutral-800/50 section-transition">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <div class="inline-block mb-4 px-4 py-1.5 rounded-full bg-brand-gold/10 dark:bg-brand-gold/20 border border-brand-gold/20 dark:border-brand-gold/30">
+                        <span class="text-xs font-bold tracking-[0.2em] text-brand-gold dark:text-brand-goldlight uppercase">Education &amp; Certifications</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 dark:text-white">Credentials <span class="gradient-text">&amp; Awards</span></h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="p-8 rounded-2xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 card-3d">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-10 h-10 rounded-xl bg-brand-gold/10 flex items-center justify-center">
+                                <i data-lucide="graduation-cap" class="w-5 h-5 text-brand-gold"></i>
+                            </div>
+                            <span class="text-xs font-bold tracking-[0.2em] text-brand-gold uppercase">Education</span>
                         </div>
-                        <div>
-                            <h4 class="text-lg font-serif font-bold text-gray-900 dark:text-white">Bachelor of Computer Applications</h4>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Sharnbasveshwar College, 2008</p>
-                            <p class="text-xs font-bold text-brand-accent dark:text-brand-gold mt-1">First Class Distinction</p>
+                        <div class="space-y-8">
+                            <div>
+                                <h4 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Masters in Computer Application</h4>
+                                <p class="text-sm text-neutral-500 dark:text-neutral-400">Bangalore University, 2011</p>
+                                <span class="inline-block mt-2 text-xs font-bold text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full">70% (Distinction)</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Bachelor of Computer Applications</h4>
+                                <p class="text-sm text-neutral-500 dark:text-neutral-400">Sharnbasveshwar College, 2008</p>
+                                <span class="inline-block mt-2 text-xs font-bold text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full">First Class Distinction</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <span class="text-xs font-bold tracking-[0.2em] text-gray-400 dark:text-gray-500 uppercase mb-6 block">Certifications & Awards</span>
-                    <ul class="space-y-4 text-sm text-gray-600 dark:text-gray-400">
-                        <!-- New Award Entry -->
-                        <li class="flex items-center gap-2">
-                            <i data-lucide="award" class="w-4 h-4 text-yellow-500"></i>
-                            <a href="https://www.linkedin.com/posts/arvindbadagi_excited-to-share-my-achievements-activity-7282385501334974472-Y_32" target="_blank" class="hover:text-brand-accent dark:hover:text-brand-gold transition-colors hover:underline decoration-1 underline-offset-2">Award Winner: 1st Place - Market Research Analysis</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-brand-accent dark:text-brand-gold"></i>
-                            <a href="https://learn.microsoft.com/api/credentials/share/en-us/AravindBadagi-8182/4F6119B9E32BAE80?sharingId=6AA72AE611799DFC" target="_blank" class="hover:text-brand-accent dark:hover:text-brand-gold transition-colors hover:underline decoration-1 underline-offset-2">Power BI Data Analyst Associate (PL-300)</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-brand-accent dark:text-brand-gold"></i>
-                            <a href="https://www.credly.com/badges/bda43a03-3d07-49f0-97db-98a6ed90aa87" target="_blank" class="hover:text-brand-accent dark:hover:text-brand-gold transition-colors hover:underline decoration-1 underline-offset-2">Excel Associate (Microsoft 365 Apps)</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-brand-accent dark:text-brand-gold"></i>
-                            <span>Data Visualization (TCS & Accenture)</span>
-                        </li>
-                    </ul>
+
+                    <div class="p-8 rounded-2xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 card-3d">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-10 h-10 rounded-xl bg-brand-gold/10 flex items-center justify-center">
+                                <i data-lucide="award" class="w-5 h-5 text-brand-gold"></i>
+                            </div>
+                            <span class="text-xs font-bold tracking-[0.2em] text-brand-gold uppercase">Certifications &amp; Awards</span>
+                        </div>
+                        <ul class="space-y-5 text-sm text-neutral-600 dark:text-neutral-400">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="trophy" class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5"></i>
+                                <a href="https://www.linkedin.com/posts/arvindbadagi_excited-to-share-my-achievements-activity-7282385501334974472-Y_32" target="_blank" class="hover:text-brand-gold transition-colors hover:underline decoration-1 underline-offset-2">Award Winner: 1st Place - Market Research Analysis</a>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="badge-check" class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5"></i>
+                                <a href="https://learn.microsoft.com/api/credentials/share/en-us/AravindBadagi-8182/4F6119B9E32BAE80?sharingId=6AA72AE611799DFC" target="_blank" class="hover:text-brand-gold transition-colors hover:underline decoration-1 underline-offset-2">Power BI Data Analyst Associate (PL-300)</a>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="badge-check" class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5"></i>
+                                <a href="https://www.credly.com/badges/bda43a03-3d07-49f0-97db-98a6ed90aa87" target="_blank" class="hover:text-brand-gold transition-colors hover:underline decoration-1 underline-offset-2">Excel Associate (Microsoft 365 Apps)</a>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="badge-check" class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5"></i>
+                                <span>Data Visualization (TCS &amp; Accenture)</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Portfolio Section (Government Work) -->
-        <section id="portfolio" class="py-32 px-6 md:px-16 bg-gray-50 dark:bg-neutral-900">
+        <section id="portfolio" class="py-32 px-6 md:px-16 bg-neutral-50 dark:bg-neutral-900 section-transition">
             <div class="max-w-7xl mx-auto">
-                <span class="text-sm font-bold tracking-[0.2em] text-gray-400 dark:text-gray-500 uppercase mb-16 block text-center">Portfolio & Government Work</span>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="text-center mb-16">
+                    <div class="inline-block mb-4 px-4 py-1.5 rounded-full bg-brand-gold/10 dark:bg-brand-gold/20 border border-brand-gold/20 dark:border-brand-gold/30">
+                        <span class="text-xs font-bold tracking-[0.2em] text-brand-gold dark:text-brand-goldlight uppercase">Portfolio</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 dark:text-white">Government <span class="gradient-text">Impact</span></h2>
+                    <p class="text-neutral-600 dark:text-neutral-400 mt-4 max-w-2xl mx-auto">Transforming public service delivery through data-driven solutions</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- 1. Bidar District Portal -->
-                    <div class="group bg-white dark:bg-neutral-950 p-10 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-neutral-800 flex flex-col h-full rounded-sm">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-12 h-12 bg-teal-50 dark:bg-neutral-900 rounded-full flex items-center justify-center text-teal-600"><i data-lucide="globe" class="w-6 h-6"></i></div>
-                            <a href="https://bhoomibidar.github.io/bhoomi/" target="_blank" class="text-gray-300 hover:text-teal-600 transition-colors"><i data-lucide="external-link" class="w-6 h-6"></i></a>
+                    <div class="group bg-white dark:bg-neutral-950 p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/50 dark:border-neutral-800/50 card-3d flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500/10 to-teal-600/10 dark:from-teal-400/10 dark:to-teal-500/10 flex items-center justify-center text-teal-600 dark:text-teal-400">
+                                <i data-lucide="globe" class="w-7 h-7"></i>
+                            </div>
+                            <a href="https://bhoomibidar.github.io/bhoomi/" target="_blank" class="text-neutral-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-3 group-hover:text-teal-600 transition-colors">Bidar District Portal</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 flex-grow">Transparent government portal for citizens to access land records, crop loss data, and services.</p>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 pt-4 border-t border-gray-100 dark:border-neutral-800">Web Development</span>
+                        <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Bidar District Portal</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 flex-grow">Transparent government portal for citizens to access land records, crop loss data, and services.</p>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 pt-4 border-t border-neutral-200/50 dark:border-neutral-800/50">Web Development</span>
                     </div>
 
                     <!-- 2. Officers Contact Portal -->
-                    <div class="group bg-white dark:bg-neutral-950 p-10 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-neutral-800 flex flex-col h-full rounded-sm">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-12 h-12 bg-blue-50 dark:bg-neutral-900 rounded-full flex items-center justify-center text-blue-600"><i data-lucide="users" class="w-6 h-6"></i></div>
-                            <a href="https://bhoomibidar.github.io/bhoomi/Officers.html" target="_blank" class="text-gray-300 hover:text-blue-600 transition-colors"><i data-lucide="external-link" class="w-6 h-6"></i></a>
+                    <div class="group bg-white dark:bg-neutral-950 p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/50 dark:border-neutral-800/50 card-3d flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/10 dark:from-blue-400/10 dark:to-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                                <i data-lucide="users" class="w-7 h-7"></i>
+                            </div>
+                            <a href="https://bhoomibidar.github.io/bhoomi/Officers.html" target="_blank" class="text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors">Officers Directory</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 flex-grow">Direct contact portal enabling citizens to reach 321+ revenue officers via WhatsApp & Email.</p>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 pt-4 border-t border-gray-100 dark:border-neutral-800">Public Service</span>
+                        <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Officers Directory</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 flex-grow">Direct contact portal enabling citizens to reach 321+ revenue officers via WhatsApp &amp; Email.</p>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 pt-4 border-t border-neutral-200/50 dark:border-neutral-800/50">Public Service</span>
                     </div>
 
                     <!-- 3. Call Log System -->
-                    <div class="group bg-white dark:bg-neutral-950 p-10 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-neutral-800 flex flex-col h-full rounded-sm">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-12 h-12 bg-red-50 dark:bg-neutral-900 rounded-full flex items-center justify-center text-red-600"><i data-lucide="phone-call" class="w-6 h-6"></i></div>
-                            <a href="https://bhoomibidar.github.io/calllogsystem/" target="_blank" class="text-gray-300 hover:text-red-600 transition-colors"><i data-lucide="external-link" class="w-6 h-6"></i></a>
+                    <div class="group bg-white dark:bg-neutral-950 p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/50 dark:border-neutral-800/50 card-3d flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500/10 to-red-600/10 dark:from-red-400/10 dark:to-red-500/10 flex items-center justify-center text-red-600 dark:text-red-400">
+                                <i data-lucide="phone-call" class="w-7 h-7"></i>
+                            </div>
+                            <a href="https://bhoomibidar.github.io/calllogsystem/" target="_blank" class="text-neutral-300 hover:text-red-600 dark:hover:text-red-400 transition-colors p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-3 group-hover:text-red-600 transition-colors">Call Log System</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 flex-grow">Technical issue resolution platform with user authentication and leveled complaint tracking.</p>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 pt-4 border-t border-gray-100 dark:border-neutral-800">Web App</span>
+                        <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Call Log System</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 flex-grow">Technical issue resolution platform with user authentication and leveled complaint tracking.</p>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 pt-4 border-t border-neutral-200/50 dark:border-neutral-800/50">Web App</span>
                     </div>
 
                     <!-- 4. Bhusuraksha Dashboard -->
-                    <div class="group bg-white dark:bg-neutral-950 p-10 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-neutral-800 flex flex-col h-full rounded-sm">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-12 h-12 bg-indigo-50 dark:bg-neutral-900 rounded-full flex items-center justify-center text-indigo-600"><i data-lucide="file-bar-chart" class="w-6 h-6"></i></div>
-                            <a href="https://app.powerbi.com/view?r=eyJrIjoiMzg0ZmU4ZDQtMWNiMy00ZjQ5LThiM2QtNGEzYzFkMTFkZGNmIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" class="text-gray-300 hover:text-indigo-600 transition-colors"><i data-lucide="external-link" class="w-6 h-6"></i></a>
+                    <div class="group bg-white dark:bg-neutral-950 p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/50 dark:border-neutral-800/50 card-3d flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-indigo-600/10 dark:from-indigo-400/10 dark:to-indigo-500/10 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                                <i data-lucide="file-bar-chart" class="w-7 h-7"></i>
+                            </div>
+                            <a href="https://app.powerbi.com/view?r=eyJrIjoiMzg0ZmU4ZDQtMWNiMy00ZjQ5LThiM2QtNGEzYzFkMTFkZGNmIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" class="text-neutral-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-3 group-hover:text-indigo-600 transition-colors">Bhusuraksha Dashboard</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 flex-grow">Power BI dashboard for tracking uploaded government files and registers across district offices.</p>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 pt-4 border-t border-gray-100 dark:border-neutral-800">Power BI • Govt Tech</span>
+                        <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Bhusuraksha Dashboard</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 flex-grow">Power BI dashboard for tracking uploaded government files and registers across district offices.</p>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 pt-4 border-t border-neutral-200/50 dark:border-neutral-800/50">Power BI • Govt Tech</span>
                     </div>
 
                     <!-- 5. Crop Loss Dashboard -->
-                    <div class="group bg-white dark:bg-neutral-950 p-10 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-neutral-800 flex flex-col h-full rounded-sm">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-12 h-12 bg-green-50 dark:bg-neutral-900 rounded-full flex items-center justify-center text-green-600"><i data-lucide="cloud-rain" class="w-6 h-6"></i></div>
-                            <a href="https://app.powerbi.com/view?r=eyJrIjoiYWQ0MzExOGQtYTY4NC00ODUyLTkyOGQtYTU4ZDY1ZDk4YjBkIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" class="text-gray-300 hover:text-green-600 transition-colors"><i data-lucide="external-link" class="w-6 h-6"></i></a>
+                    <div class="group bg-white dark:bg-neutral-950 p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/50 dark:border-neutral-800/50 card-3d flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500/10 to-green-600/10 dark:from-green-400/10 dark:to-green-500/10 flex items-center justify-center text-green-600 dark:text-green-400">
+                                <i data-lucide="cloud-rain" class="w-7 h-7"></i>
+                            </div>
+                            <a href="https://app.powerbi.com/view?r=eyJrIjoiYWQ0MzExOGQtYTY4NC00ODUyLTkyOGQtYTU4ZDY1ZDk4YjBkIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" class="text-neutral-300 hover:text-green-600 dark:hover:text-green-400 transition-colors p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-3 group-hover:text-green-600 transition-colors">Crop Loss Dashboard</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 flex-grow">Analytics dashboard for tracking crop loss reimbursement data for the Deputy Commissioner.</p>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 pt-4 border-t border-gray-100 dark:border-neutral-800">Power BI • Analytics</span>
+                        <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">Crop Loss Dashboard</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 flex-grow">Analytics dashboard for tracking crop loss reimbursement data for the Deputy Commissioner.</p>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 pt-4 border-t border-neutral-200/50 dark:border-neutral-800/50">Power BI • Analytics</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section (Personal Projects) -->
-        <section id="projects" class="py-32 px-6 md:px-16 border-t border-gray-100 dark:border-neutral-800">
+        <section id="projects" class="py-32 px-6 md:px-16 bg-white dark:bg-neutral-950 border-t border-neutral-200/50 dark:border-neutral-800/50 section-transition">
             <div class="max-w-7xl mx-auto">
-                <span class="text-sm font-bold tracking-[0.2em] text-gray-400 dark:text-gray-500 uppercase mb-16 block text-center">Data Analysis Projects</span>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    
+                <div class="text-center mb-16">
+                    <div class="inline-block mb-4 px-4 py-1.5 rounded-full bg-brand-gold/10 dark:bg-brand-gold/20 border border-brand-gold/20 dark:border-brand-gold/30">
+                        <span class="text-xs font-bold tracking-[0.2em] text-brand-gold dark:text-brand-goldlight uppercase">Data Analysis</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 dark:text-white">Featured <span class="gradient-text">Projects</span></h2>
+                    <p class="text-neutral-600 dark:text-neutral-400 mt-4 max-w-2xl mx-auto">Exploring data to uncover insights and drive decisions</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
                     <!-- 1. Blinkit Analytics -->
-                    <div class="group bg-white dark:bg-neutral-950 p-10 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-neutral-800 flex flex-col h-full rounded-sm">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-12 h-12 bg-orange-50 dark:bg-neutral-900 rounded-full flex items-center justify-center text-orange-600"><i data-lucide="shopping-bag" class="w-6 h-6"></i></div>
-                            <a href="https://app.powerbi.com/view?r=eyJrIjoiNTA1ZGY2NDItMzVhYy00NWJiLWE2MDUtNmExNTZiMjRmNGZiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" class="text-gray-300 hover:text-orange-600 transition-colors"><i data-lucide="external-link" class="w-6 h-6"></i></a>
+                    <div class="group bg-white dark:bg-neutral-950 p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/50 dark:border-neutral-800/50 card-3d flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500/10 to-orange-600/10 dark:from-orange-400/10 dark:to-orange-500/10 flex items-center justify-center text-orange-600 dark:text-orange-400">
+                                <i data-lucide="shopping-bag" class="w-7 h-7"></i>
+                            </div>
+                            <a href="https://app.powerbi.com/view?r=eyJrIjoiNTA1ZGY2NDItMzVhYy00NWJiLWE2MDUtNmExNTZiMjRmNGZiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" class="text-neutral-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-3 group-hover:text-orange-600 transition-colors">Blinkit Analytics Dashboard</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 flex-grow">
+                        <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Blinkit Analytics Dashboard</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 flex-grow">
                             Dynamic Power BI dashboard analyzing sales data spanning over a decade.
                             <br/><br/>
                             • <strong>Total Sales:</strong> $1.20M | Peak Year: 2020<br/>
                             • <strong>Insights:</strong> Tier 2 locations contribute 39.77% of sales.<br/>
-                            • <strong>Top Items:</strong> Fruits & Veg ($178K), Snacks ($173K).
+                            • <strong>Top Items:</strong> Fruits &amp; Veg ($178K), Snacks ($173K).
                         </p>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 pt-4 border-t border-gray-100 dark:border-neutral-800">Power BI • Retail</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 pt-4 border-t border-neutral-200/50 dark:border-neutral-800/50">Power BI • Retail</span>
                     </div>
 
                     <!-- 2. Indian Movie Industry -->
-                    <div class="group bg-white dark:bg-neutral-950 p-10 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-neutral-800 flex flex-col h-full rounded-sm">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-12 h-12 bg-pink-50 dark:bg-neutral-900 rounded-full flex items-center justify-center text-pink-600"><i data-lucide="film" class="w-6 h-6"></i></div>
-                            <a href="https://app.powerbi.com/view?r=eyJrIjoiODRjZmM5ZGQtZjI1Zi00YTJiLThlZDItZDQyZTdmNTE4MDZiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" class="text-gray-300 hover:text-pink-600 transition-colors"><i data-lucide="external-link" class="w-6 h-6"></i></a>
+                    <div class="group bg-white dark:bg-neutral-950 p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/50 dark:border-neutral-800/50 card-3d flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500/10 to-pink-600/10 dark:from-pink-400/10 dark:to-pink-500/10 flex items-center justify-center text-pink-600 dark:text-pink-400">
+                                <i data-lucide="film" class="w-7 h-7"></i>
+                            </div>
+                            <a href="https://app.powerbi.com/view?r=eyJrIjoiODRjZmM5ZGQtZjI1Zi00YTJiLThlZDItZDQyZTdmNTE4MDZiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" class="text-neutral-300 hover:text-pink-600 dark:hover:text-pink-400 transition-colors p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-3 group-hover:text-pink-600 transition-colors">Indian Cinema Analysis</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 flex-grow">
+                        <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">Indian Cinema Analysis</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 flex-grow">
                             Hackathon project analyzing Box Office trends (2014-2024), OTT impact, and genre preferences.
                             <br/><br/>
                             • <strong>Dataset:</strong> Box office metrics, Directors, Genres, Languages.<br/>
                             • <strong>Outcome:</strong> Deep insights into the evolving Indian film landscape.
                         </p>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 pt-4 border-t border-gray-100 dark:border-neutral-800">Media Analytics</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 pt-4 border-t border-neutral-200/50 dark:border-neutral-800/50">Media Analytics</span>
                     </div>
 
                     <!-- 3. Uber Fabric Dashboard -->
-                    <div class="group bg-white dark:bg-neutral-950 p-10 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-neutral-800 flex flex-col h-full rounded-sm">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-12 h-12 bg-gray-100 dark:bg-neutral-900 rounded-full flex items-center justify-center text-gray-600"><i data-lucide="map" class="w-6 h-6"></i></div>
-                            <a href="https://app.powerbi.com/view?r=eyJrIjoiYTA3NDFmM2MtODQ5Yy00YmQ0LThiYTgtMDQ1ODM4NWI2MTk2IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" class="text-gray-300 hover:text-gray-600 transition-colors"><i data-lucide="external-link" class="w-6 h-6"></i></a>
+                    <div class="group bg-white dark:bg-neutral-950 p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/50 dark:border-neutral-800/50 card-3d flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-neutral-400/10 to-neutral-500/10 dark:from-neutral-500/10 dark:to-neutral-600/10 flex items-center justify-center text-neutral-600 dark:text-neutral-400">
+                                <i data-lucide="map" class="w-7 h-7"></i>
+                            </div>
+                            <a href="https://app.powerbi.com/view?r=eyJrIjoiYTA3NDFmM2MtODQ5Yy00YmQ0LThiYTgtMDQ1ODM4NWI2MTk2IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" class="text-neutral-300 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-3 group-hover:text-gray-600 transition-colors">Uber Fabric Dashboard</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 flex-grow">
+                        <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-neutral-600 dark:group-hover:text-neutral-400 transition-colors">Uber Fabric Dashboard</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 flex-grow">
                             🥈 <strong>2nd Place Winner</strong>: Microsoft Fabric Bootcamp.
                             <br/><br/>
                             Showcased expertise in Microsoft Fabric concepts by designing an interactive dashboard for Uber's business use case.
                         </p>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 pt-4 border-t border-gray-100 dark:border-neutral-800">Microsoft Fabric</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 pt-4 border-t border-neutral-200/50 dark:border-neutral-800/50">Microsoft Fabric</span>
                     </div>
 
                     <!-- 4. IPL Analysis -->
-                    <div class="group bg-white dark:bg-neutral-950 p-10 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-neutral-800 flex flex-col h-full rounded-sm">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-12 h-12 bg-yellow-50 dark:bg-neutral-900 rounded-full flex items-center justify-center text-yellow-600"><i data-lucide="trophy" class="w-6 h-6"></i></div>
-                            <a href="https://project.novypro.com/OSrYgO" target="_blank" class="text-gray-300 hover:text-yellow-600 transition-colors"><i data-lucide="external-link" class="w-6 h-6"></i></a>
+                    <div class="group bg-white dark:bg-neutral-950 p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/50 dark:border-neutral-800/50 card-3d flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 dark:from-yellow-400/10 dark:to-yellow-500/10 flex items-center justify-center text-yellow-600 dark:text-yellow-400">
+                                <i data-lucide="trophy" class="w-7 h-7"></i>
+                            </div>
+                            <a href="https://project.novypro.com/OSrYgO" target="_blank" class="text-neutral-300 hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-3 group-hover:text-yellow-600 transition-colors">IPL Analysis Dashboard</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 flex-grow">Comprehensive cricket statistics from 2008-2022. Includes Title Winners, Orange/Purple Cap Holders, and detailed match insights.</p>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 pt-4 border-t border-gray-100 dark:border-neutral-800">Sports Analytics</span>
+                        <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">IPL Analysis Dashboard</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 flex-grow">Comprehensive cricket statistics from 2008-2022. Includes Title Winners, Orange/Purple Cap Holders, and detailed match insights.</p>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 pt-4 border-t border-neutral-200/50 dark:border-neutral-800/50">Sports Analytics</span>
                     </div>
 
                     <!-- 5. Amazon Sales -->
-                    <div class="group bg-white dark:bg-neutral-950 p-10 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-neutral-800 flex flex-col h-full rounded-sm">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-12 h-12 bg-orange-50 dark:bg-neutral-900 rounded-full flex items-center justify-center text-orange-600"><i data-lucide="shopping-cart" class="w-6 h-6"></i></div>
-                            <a href="https://project.novypro.com/iL5RSn" target="_blank" class="text-gray-300 hover:text-orange-600 transition-colors"><i data-lucide="external-link" class="w-6 h-6"></i></a>
+                    <div class="group bg-white dark:bg-neutral-950 p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/50 dark:border-neutral-800/50 card-3d flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500/10 to-orange-600/10 dark:from-orange-400/10 dark:to-orange-500/10 flex items-center justify-center text-orange-600 dark:text-orange-400">
+                                <i data-lucide="shopping-cart" class="w-7 h-7"></i>
+                            </div>
+                            <a href="https://project.novypro.com/iL5RSn" target="_blank" class="text-neutral-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-3 group-hover:text-orange-600 transition-colors">Amazon Sales Dashboard</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 flex-grow">Actionable insights for decision-making. Features interactive elements for sales exploration and performance tracking.</p>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 pt-4 border-t border-gray-100 dark:border-neutral-800">E-Commerce</span>
+                        <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Amazon Sales Dashboard</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 flex-grow">Actionable insights for decision-making. Features interactive elements for sales exploration and performance tracking.</p>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 pt-4 border-t border-neutral-200/50 dark:border-neutral-800/50">E-Commerce</span>
                     </div>
 
                     <!-- 6. Car Sales Analysis -->
-                    <div class="group bg-white dark:bg-neutral-950 p-10 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-neutral-800 flex flex-col h-full rounded-sm">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-12 h-12 bg-gray-100 dark:bg-neutral-900 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400"><i data-lucide="car" class="w-6 h-6"></i></div>
-                            <a href="https://github.com/arvindbadagi/Car-Data-Analysis" target="_blank" class="text-gray-300 hover:text-gray-600 dark:hover:text-white transition-colors"><i data-lucide="github" class="w-6 h-6"></i></a>
+                    <div class="group bg-white dark:bg-neutral-950 p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-neutral-200/50 dark:border-neutral-800/50 card-3d flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-neutral-400/10 to-neutral-500/10 dark:from-neutral-500/10 dark:to-neutral-600/10 flex items-center justify-center text-neutral-600 dark:text-neutral-400">
+                                <i data-lucide="car" class="w-7 h-7"></i>
+                            </div>
+                            <a href="https://github.com/arvindbadagi/Car-Data-Analysis" target="_blank" class="text-neutral-300 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-3 group-hover:text-gray-600 dark:group-hover:text-white transition-colors">Car Sales Analysis</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 flex-grow">Detailed analysis using MySQL. Attributes include manufacture year, price, mileage, and transmission type.</p>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 pt-4 border-t border-gray-100 dark:border-neutral-800">MySQL • Cleaning</span>
+                        <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-neutral-600 dark:group-hover:text-neutral-400 transition-colors">Car Sales Analysis</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 flex-grow">Detailed analysis using MySQL. Attributes include manufacture year, price, mileage, and transmission type.</p>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 pt-4 border-t border-neutral-200/50 dark:border-neutral-800/50">MySQL • Cleaning</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-32 px-6 md:px-16 border-t border-gray-100 dark:border-neutral-800">
-            <div class="max-w-2xl mx-auto text-center">
-                <span class="text-sm font-bold tracking-[0.2em] text-gray-400 dark:text-gray-500 uppercase mb-6 block">Contact</span>
-                <h2 class="text-4xl font-serif font-bold text-gray-900 dark:text-white mb-10">Let's Collaborate</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                    <a href="mailto:aravind.dsi@gmail.com" class="p-8 border border-gray-100 dark:border-neutral-800 hover:border-brand-accent dark:hover:border-brand-gold transition-colors group">
-                        <i data-lucide="mail" class="w-8 h-8 text-gray-400 group-hover:text-brand-accent dark:group-hover:text-brand-gold mx-auto mb-4 transition-colors"></i>
-                        <p class="text-base font-bold text-gray-900 dark:text-white">aravind.dsi@gmail.com</p>
-                    </a>
-                    <a href="https://wa.me/919480832160" target="_blank" class="p-8 border border-gray-100 dark:border-neutral-800 hover:border-brand-accent dark:hover:border-brand-gold transition-colors group">
-                        <div class="flex items-center justify-center gap-2 mb-4">
-                            <i data-lucide="phone" class="w-8 h-8 text-gray-400 group-hover:text-brand-accent dark:group-hover:text-brand-gold transition-colors"></i>
-                            <i data-lucide="message-circle" class="w-5 h-5 text-green-500"></i>
+        <section id="contact" class="py-32 px-6 md:px-16 bg-neutral-50 dark:bg-neutral-900 border-t border-neutral-200/50 dark:border-neutral-800/50 section-transition">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-block mb-4 px-4 py-1.5 rounded-full bg-brand-gold/10 dark:bg-brand-gold/20 border border-brand-gold/20 dark:border-brand-gold/30">
+                    <span class="text-xs font-bold tracking-[0.2em] text-brand-gold dark:text-brand-goldlight uppercase">Contact</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 dark:text-white mb-6">Let's <span class="gradient-text">Collaborate</span></h2>
+                <p class="text-neutral-600 dark:text-neutral-400 mb-12 max-w-xl mx-auto">Have a project in mind? Let's connect and turn data into meaningful insights.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+                    <a href="mailto:aravind.dsi@gmail.com" class="group p-8 rounded-2xl bg-white dark:bg-neutral-950 border border-neutral-200/50 dark:border-neutral-800/50 hover:border-brand-gold dark:hover:border-brand-gold transition-all duration-300 card-3d">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-gold group-hover:text-neutral-900 transition-colors">
+                            <i data-lucide="mail" class="w-7 h-7 text-brand-gold group-hover:text-neutral-900 transition-colors"></i>
                         </div>
-                        <p class="text-base font-bold text-gray-900 dark:text-white">+91 9480832160</p>
+                        <p class="text-base font-semibold text-neutral-900 dark:text-white">aravind.dsi@gmail.com</p>
+                    </a>
+                    <a href="https://wa.me/919480832160" target="_blank" class="group p-8 rounded-2xl bg-white dark:bg-neutral-950 border border-neutral-200/50 dark:border-neutral-800/50 hover:border-brand-gold dark:hover:border-brand-gold transition-all duration-300 card-3d">
+                        <div class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                            <i data-lucide="phone" class="w-7 h-7 text-green-500 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <p class="text-base font-semibold text-neutral-900 dark:text-white">+91 9480832160</p>
                     </a>
                 </div>
-                
-                <div class="flex justify-center gap-8">
-                    <a href="https://linkedin.com/in/arvindbadagi" target="_blank" class="text-gray-400 hover:text-brand-accent dark:hover:text-brand-gold transition-colors"><i data-lucide="linkedin" class="w-8 h-8"></i></a>
-                    <a href="https://github.com/arvindbadagi/" target="_blank" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"><i data-lucide="github" class="w-8 h-8"></i></a>
+
+                <div class="flex justify-center gap-6">
+                    <a href="https://linkedin.com/in/arvindbadagi" target="_blank" class="w-14 h-14 rounded-2xl bg-white dark:bg-neutral-950 border border-neutral-200/50 dark:border-neutral-800/50 flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:border-brand-gold hover:text-brand-gold dark:hover:border-brand-gold dark:hover:text-brand-gold transition-all duration-300">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://github.com/arvindbadagi/" target="_blank" class="w-14 h-14 rounded-2xl bg-white dark:bg-neutral-950 border border-neutral-200/50 dark:border-neutral-800/50 flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:border-brand-gold hover:text-brand-gold dark:hover:border-brand-gold dark:hover:text-brand-gold transition-all duration-300">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                    </a>
                 </div>
-                
-                <p class="text-[10px] uppercase font-bold text-gray-400 mt-20 tracking-widest">&copy; 2024 Aravind Badagi. Bengaluru.</p>
+
+                <p class="text-[10px] uppercase font-bold text-neutral-400 dark:text-neutral-500 mt-20 tracking-[0.2em]">&copy; 2024 Aravind Badagi. Bengaluru.</p>
             </div>
         </section>
     </main>
 
     <!-- Floating Action Buttons -->
-    <div class="fixed bottom-8 right-8 z-[60] flex flex-col gap-5 items-end">
-        
+    <div class="fixed bottom-8 right-8 z-[60] flex flex-col gap-4 items-end">
+
         <!-- WhatsApp Button with Custom Message -->
-        <a href="https://wa.me/919480832160?text=Thank%20you%20for%20exploring%20my%20work!%20I%E2%80%99m%20passionate%20about%20turning%20complex%20data%20into%20actionable%20insights.%20Whether%20it's%20through%20a%20Power%20BI%20dashboard%20or%20a%20custom%20Python%20automation,%20I%20love%20finding%20the%20story%20hidden%20in%20the%20numbers.%20Let%E2%80%99s%20connect%20and%20talk%20about%20how%20data%20can%20drive%20your%20next%20big%20decision." target="_blank" class="w-14 h-14 bg-green-500 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 group" title="Chat on WhatsApp">
+        <a href="https://wa.me/919480832160?text=Thank%20you%20for%20exploring%20my%20work!%20I%E2%80%99m%20passionate%20about%20turning%20complex%20data%20into%20actionable%20insights.%20Whether%20it's%20through%20a%20Power%20BI%20dashboard%20or%20a%20custom%20Python%20automation,%20I%20love%20finding%20the%20story%20hidden%20in%20the%20numbers.%20Let%E2%80%99s%20connect%20and%20talk%20about%20how%20data%20can%20drive%20your%20next%20big%20decision." target="_blank" class="w-14 h-14 bg-green-500 text-white rounded-2xl shadow-2xl shadow-green-500/25 flex items-center justify-center hover:scale-110 transition-transform duration-300 group" title="Chat on WhatsApp">
             <i data-lucide="message-circle" class="w-7 h-7 fill-current"></i>
-            <span class="absolute right-16 bg-white dark:bg-neutral-800 text-gray-700 dark:text-gray-200 text-xs font-bold py-1 px-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Chat with me</span>
+            <span class="absolute right-16 bg-white dark:bg-neutral-800 text-neutral-700 dark:text-neutral-200 text-xs font-bold py-1.5 px-3 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Chat with me</span>
         </a>
     </div>
 
@@ -587,7 +894,7 @@
 
         // Theme Toggle
         const themeToggleBtn = document.getElementById('theme-toggle');
-        
+
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         } else {
@@ -603,7 +910,7 @@
                 localStorage.theme = 'dark';
             }
         }
-        if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+        if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
 
         // Mobile Menu
         const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -612,8 +919,11 @@
 
         mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
+
+        // Re-initialize icons after any DOM changes
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
     </script>
 </body>
-
 </html>
-
